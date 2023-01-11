@@ -30,11 +30,7 @@ const options = {
         }
         else if (selectedDates[0] > new Date()){
             refs.btnStart.removeAttribute('disabled')
-            //console.log(selectedDates[0]);
-            //console.log(Date.now());
-            //const ms = selectedDates[0] - Date.now();
-            //console.log(ms);
-
+        
             refs.btnStart.addEventListener('click', () => {
                 this.timerID=setInterval(() => {
                     const ms = selectedDates[0] - Date.now();
@@ -79,4 +75,4 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-flatpickr(refs.calendar, options)
+flatpickr(refs.calendar, options);
