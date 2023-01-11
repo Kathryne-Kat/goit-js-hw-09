@@ -2,7 +2,7 @@ import Notiflix from 'notiflix';
 
 const refs = {
   formElem: document.querySelector('.form'),
- };
+};
 
 function createPromise(position, delay) {
   const promise = new Promise((resolve, reject) => {
@@ -36,5 +36,5 @@ refs.formElem.addEventListener('submit', e => {
       .then(({position, delay}) => { Notiflix.Notify.success(`Fulfilled promise ${i} in ${delay} ms`) })
       .catch(({position, delay}) => { Notiflix.Notify.failure(`Reject promise ${i} in ${delay} ms`) })
       delay += step;
-    }  
+  } 
 });
