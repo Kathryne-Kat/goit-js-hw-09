@@ -31,10 +31,10 @@ refs.formElem.addEventListener('submit', e => {
 
   console.log(delay, step, amount);
   
-  for (let pos = 1; pos <= amount; pos += 1) {
-    createPromise(pos, delay)
-      .then(({position, delay}) => { Notiflix.Notify.success(`Fulfilled promise ${pos} in ${delay} ms`) })
-      .catch(({position, delay}) => { Notiflix.Notify.failure(`Reject promise ${pos} in ${delay} ms`) })
+  for (let i = 1; i <= amount; i += 1) {
+    createPromise(i, delay)
+      .then(({position, delay}) => { Notiflix.Notify.success(`Fulfilled promise ${i} in ${delay} ms`) })
+      .catch(({position, delay}) => { Notiflix.Notify.failure(`Reject promise ${i} in ${delay} ms`) })
       delay += step;
     }  
 });
